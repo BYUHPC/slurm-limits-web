@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Slurm Limits</title>
+	<link rel="stylesheet" type="text/css" href="limits.css">
+	<script type="text/javascript" src="limits.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+</head>
+<body>
+	<h2>Slurm Limits: My Account</h2>
+
+	<div id="instructions">
+	    <p>Edit the table below to generate commands that can be used to modify your group members&rsquo; limits.
+		See also: <a href="https://github.com/BYUHPC/slurm-fairshare-pie">Slurm Shares</a>.</p>
+	    <p><b>To save these changes</b>, log into ssh.fsl.byu.edu and paste the commands generated below into the terminal.</p>
+	    <pre id="commands"># command format below for reference
+	    sacctmgr -i modify user $user set limitType=$limit<br/></pre>
+	</div>
+	<br/>
+	<div id="datatable"></div>
+</body>
+</html>
