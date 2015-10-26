@@ -5,7 +5,7 @@
     $username = $_SESSION['userdata']['username'];
     $pdo = \Fsl\Database::connect("slurm");
     $query = <<<EOT
-            SELECT user, acct, grp_submit_jobs, grp_cpus, grp_nodes, grp_wall, grp_cpu_run_mins
+            SELECT user, acct, grp_submit_jobs, grp_tres, grp_wall, grp_tres_run_mins
             FROM fsl_assoc_table
             WHERE (acct=? OR parent_acct=?) AND NOT deleted AND parent_acct != 'root'
             ORDER BY user='', user;
